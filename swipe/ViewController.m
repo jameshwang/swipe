@@ -35,11 +35,21 @@
 - (void)swipeRight
 {
     self.swipeIdentifier.text = @"NOO!";
+    
+    SystemSoundID SoundID;
+    NSString *soundFile = [[NSBundle mainBundle] pathForResource:@"no" ofType:@"mp3"];
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:soundFile], &SoundID);
+    AudioServicesPlaySystemSound(SoundID);
 }
 
 - (void)swipeLeft
 {
-    self.swipeIdentifier.text = @"OKAAYYYY";
+    self.swipeIdentifier.text = @"Yeaahh!";
+    
+    SystemSoundID SoundID;
+    NSString *soundFile = [[NSBundle mainBundle] pathForResource:@"yeah" ofType:@"mp3"];
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:soundFile], &SoundID);
+    AudioServicesPlaySystemSound(SoundID);
 }
 
 - (void)swipeUp

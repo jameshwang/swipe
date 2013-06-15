@@ -23,6 +23,10 @@
 		1A746D8E176CBE1E00D43781 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A746D69176CBE1E00D43781 /* Foundation.framework */; };
 		1A746D96176CBE1E00D43781 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1A746D94176CBE1E00D43781 /* InfoPlist.strings */; };
 		1A746D99176CBE1E00D43781 /* swipeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A746D98176CBE1E00D43781 /* swipeTests.m */; };
+		1A746DA3176CD00200D43781 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A746DA2176CD00200D43781 /* AudioToolbox.framework */; };
+		1A746DA5176CD01100D43781 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A746DA4176CD01100D43781 /* AudioToolbox.framework */; };
+		1A746DA7176CF7C500D43781 /* yeah.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1A746DA6176CF7C500D43781 /* yeah.mp3 */; };
+		1A746DAB176CFE7300D43781 /* no.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1A746DAA176CFE7300D43781 /* no.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,10 @@
 		1A746D95176CBE1E00D43781 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1A746D97176CBE1E00D43781 /* swipeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swipeTests.h; sourceTree = "<group>"; };
 		1A746D98176CBE1E00D43781 /* swipeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = swipeTests.m; sourceTree = "<group>"; };
+		1A746DA2176CD00200D43781 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		1A746DA4176CD01100D43781 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		1A746DA6176CF7C500D43781 /* yeah.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = yeah.mp3; sourceTree = "<group>"; };
+		1A746DAA176CFE7300D43781 /* no.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = no.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,9 +73,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A746DA3176CD00200D43781 /* AudioToolbox.framework in Frameworks */,
 				1A746D68176CBE1E00D43781 /* UIKit.framework in Frameworks */,
 				1A746D6A176CBE1E00D43781 /* Foundation.framework in Frameworks */,
 				1A746D6C176CBE1E00D43781 /* CoreGraphics.framework in Frameworks */,
+				1A746DA5176CD01100D43781 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +97,7 @@
 		1A746D5B176CBE1E00D43781 = {
 			isa = PBXGroup;
 			children = (
+				1A746DA2176CD00200D43781 /* AudioToolbox.framework */,
 				1A746D6D176CBE1E00D43781 /* swipe */,
 				1A746D91176CBE1E00D43781 /* swipeTests */,
 				1A746D66176CBE1E00D43781 /* Frameworks */,
@@ -106,6 +117,7 @@
 		1A746D66176CBE1E00D43781 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1A746DA4176CD01100D43781 /* AudioToolbox.framework */,
 				1A746D67176CBE1E00D43781 /* UIKit.framework */,
 				1A746D69176CBE1E00D43781 /* Foundation.framework */,
 				1A746D6B176CBE1E00D43781 /* CoreGraphics.framework */,
@@ -117,6 +129,8 @@
 		1A746D6D176CBE1E00D43781 /* swipe */ = {
 			isa = PBXGroup;
 			children = (
+				1A746DA6176CF7C500D43781 /* yeah.mp3 */,
+				1A746DAA176CFE7300D43781 /* no.mp3 */,
 				1A746D76176CBE1E00D43781 /* AppDelegate.h */,
 				1A746D77176CBE1E00D43781 /* AppDelegate.m */,
 				1A746D7F176CBE1E00D43781 /* MainStoryboard.storyboard */,
@@ -236,6 +250,8 @@
 				1A746D7C176CBE1E00D43781 /* Default@2x.png in Resources */,
 				1A746D7E176CBE1E00D43781 /* Default-568h@2x.png in Resources */,
 				1A746D81176CBE1E00D43781 /* MainStoryboard.storyboard in Resources */,
+				1A746DA7176CF7C500D43781 /* yeah.mp3 in Resources */,
+				1A746DAB176CFE7300D43781 /* no.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
