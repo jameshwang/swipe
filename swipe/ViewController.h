@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+
+@interface ViewController : UIViewController <UIGestureRecognizerDelegate>
+
+@property (strong, nonatomic) IBOutlet UILabel *swipeIdentifier;
 
 @end

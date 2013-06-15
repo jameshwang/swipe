@@ -18,6 +18,33 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    UISwipeGestureRecognizer *rightSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeRight)];
+    rightSwipe.direction = UISwipeGestureRecognizerDirectionRight;
+    [self.view addGestureRecognizer:rightSwipe];
+    
+    UISwipeGestureRecognizer *leftSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeLeft)];
+    leftSwipe.direction = UISwipeGestureRecognizerDirectionLeft;
+    [self.view addGestureRecognizer:leftSwipe];
+    
+    UISwipeGestureRecognizer *upSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeUp)];
+    upSwipe.direction = UISwipeGestureRecognizerDirectionUp;
+    [self.view addGestureRecognizer:upSwipe];
+}
+
+- (void)swipeRight
+{
+    self.swipeIdentifier.text = @"NOO!";
+}
+
+- (void)swipeLeft
+{
+    self.swipeIdentifier.text = @"OKAAYYYY";
+}
+
+- (void)swipeUp
+{
+    self.swipeIdentifier.text = @"Maybe";
 }
 
 - (void)didReceiveMemoryWarning
