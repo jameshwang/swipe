@@ -7,10 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "Sound.h"
 
 @interface ViewController ()
-@property SystemSoundID SoundNo;
-@property SystemSoundID SoundYeah;
+{
+    SystemSoundID SoundNo, SoundYeah;
+}
+
 @end
 
 @implementation ViewController
@@ -32,29 +35,20 @@
     upSwipe.direction = UISwipeGestureRecognizerDirectionUp;
     [self.view addGestureRecognizer:upSwipe];
     
-    [self loadSounds];
+    SoundNo = [[Sound getSoundByFilename:@"no"] SoundID];
+    SoundYeah = [[Sound getSoundByFilename:@"yeah"] SoundID];
 }
-
-- (void)loadSounds
-{
-    NSString* soundFile = [[NSBundle mainBundle] pathForResource:@"no" ofType:@"mp3"];
-    AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:soundFile], &(self->_SoundNo));
-    
-    soundFile = [[NSBundle mainBundle] pathForResource:@"yeah" ofType:@"mp3"];
-    AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:soundFile], &(self->_SoundYeah));
-}
-
 
 - (void)swipeRight
 {
     self.swipeIdentifier.text = @"NOO!";
-    AudioServicesPlaySystemSound(self.SoundNo);
+    AudioServicesPlaySystemSound(SoundNo);
 }
 
 - (void)swipeLeft
 {
     self.swipeIdentifier.text = @"Yeaahh!";
-    AudioServicesPlaySystemSound(self.SoundYeah);
+    AudioServicesPlaySystemSound(SoundYeah);
 }
 
 - (void)swipeUp

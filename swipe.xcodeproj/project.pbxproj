@@ -27,6 +27,7 @@
 		1A746DA5176CD01100D43781 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A746DA4176CD01100D43781 /* AudioToolbox.framework */; };
 		1A746DA7176CF7C500D43781 /* yeah.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1A746DA6176CF7C500D43781 /* yeah.mp3 */; };
 		1A746DAB176CFE7300D43781 /* no.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1A746DAA176CFE7300D43781 /* no.mp3 */; };
+		1A949444176EC24D00296A5F /* Sound.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A949443176EC24D00296A5F /* Sound.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		1A746DA4176CD01100D43781 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		1A746DA6176CF7C500D43781 /* yeah.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = yeah.mp3; sourceTree = "<group>"; };
 		1A746DAA176CFE7300D43781 /* no.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = no.mp3; sourceTree = "<group>"; };
+		1A949442176EC24D00296A5F /* Sound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sound.h; sourceTree = "<group>"; };
+		1A949443176EC24D00296A5F /* Sound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sound.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +139,8 @@
 				1A746D7F176CBE1E00D43781 /* MainStoryboard.storyboard */,
 				1A746D82176CBE1E00D43781 /* ViewController.h */,
 				1A746D83176CBE1E00D43781 /* ViewController.m */,
+				1A949442176EC24D00296A5F /* Sound.h */,
+				1A949443176EC24D00296A5F /* Sound.m */,
 				1A746D6E176CBE1E00D43781 /* Supporting Files */,
 			);
 			path = swipe;
@@ -289,6 +294,7 @@
 				1A746D74176CBE1E00D43781 /* main.m in Sources */,
 				1A746D78176CBE1E00D43781 /* AppDelegate.m in Sources */,
 				1A746D84176CBE1E00D43781 /* ViewController.m in Sources */,
+				1A949444176EC24D00296A5F /* Sound.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +475,7 @@
 				1A746D9E176CBE1E00D43781 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1A746D9F176CBE1E00D43781 /* Build configuration list for PBXNativeTarget "swipeTests" */ = {
 			isa = XCConfigurationList;
@@ -477,6 +484,7 @@
 				1A746DA1176CBE1E00D43781 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
