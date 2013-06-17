@@ -21,22 +21,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
     
-    UISwipeGestureRecognizer *rightSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeRight)];
-    [rightSwipe setDirection:UISwipeGestureRecognizerDirectionRight];
-    [self.view addGestureRecognizer:rightSwipe];
-    
-    UISwipeGestureRecognizer *leftSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeLeft)];
-    leftSwipe.direction = UISwipeGestureRecognizerDirectionLeft;
-    [self.view addGestureRecognizer:leftSwipe];
-    
-    UISwipeGestureRecognizer *upSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeUp)];
-    upSwipe.direction = UISwipeGestureRecognizerDirectionUp;
-    [self.view addGestureRecognizer:upSwipe];
+    [self bindSwipe:@selector(swipeRight) withDirection:UISwipeGestureRecognizerDirectionRight];
+    [self bindSwipe:@selector(swipeLeft) withDirection:UISwipeGestureRecognizerDirectionLeft];
+    [self bindSwipe:@selector(swipeUp) withDirection:UISwipeGestureRecognizerDirectionUp];
     
     SoundNo = [[Sound getSoundByFilename:@"no"] SoundID];
     SoundYeah = [[Sound getSoundByFilename:@"yeah"] SoundID];
+}
+
+- (void)bindSwipe:(SEL) swipeMethod withDirection:(UISwipeGestureRecognizerDirection) swipeGesture
+{    
+    UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:swipeMethod];
+    [swipe setDirection:swipeGesture];
+    [self.view addGestureRecognizer:swipe];
 }
 
 - (void)swipeRight
